@@ -1,0 +1,55 @@
+.new_arrivals{
+    width:100%;
+}
+.new_arrivals_title{
+    margin-top: 74px;
+}
+.new_arrivals_sorting{
+    display:inline-block;
+    border-radius: 3px;
+    overflow:visible;
+    margin-top: 59px;
+}
+.grid_sorting_button {
+    height:40px;
+    min-width:100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor:pointer;
+    border: solid 1px #ebebeb;
+    font-size: 15px;
+    font-weight: 500;
+    background: #FFFFFF;
+    border-radius: 3px;
+    margin: 0;
+	float: left;
+	margin-left: 2px;
+}
+.grid_sorting_button:first-child{
+    margin-left: 0px;
+
+}
+/* .grid_sorting_button:last-child{
+
+} */
+
+.grid_sorting_button:hover{
+    background: gray;
+
+}
+.grid_sorting_button{
+    color:#FFFFFF;
+    background: black;
+}
+
+.product-grid
+{
+	width: 100%;
+	margin-top: 57px;
+}
+.product-item
+{
+	width: 20%;
+	height: 380px;
+	cursor: pointer;
+}

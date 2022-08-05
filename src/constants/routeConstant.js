@@ -1,0 +1,5 @@
+export const home="/"
+export const shop="/shop"
+export const cart="/cart"
+export const view="/view"
+export const payment="/payment"

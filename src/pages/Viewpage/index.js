@@ -42,6 +42,7 @@ const View = () => {
   }, [id])
 
   return (
+    <>          
     <div className="view">
       {data.map((element, id) => {
         return (
@@ -59,14 +60,14 @@ const View = () => {
               </div>
               <p>{element.type}</p>
               <p>{element.somedata}</p>
-        
+
               {getdata.some((e) => e.id == element.id) ? (
                 <Link to="/cart">
                   {" "}
                   <Button
                     variant="dark"
                     style={{ width: "230px" }}
-                    onClick={() => send(element)}
+                    // onClick={() => send(element)}
                     key={id}
                   >
                     Go To Cart
@@ -79,15 +80,15 @@ const View = () => {
                   onClick={() => send(element)}
                   key={id}
                 >
-                  Add TO Cart
+                  Add To Cart
                 </Button>
               )}
-           
             </div>
           </div>
         )
       })}
     </div>
+    </>
   )
 }
 export default View

@@ -47,7 +47,7 @@ export const Itemdata = [
   {
     id: 6,
     rname: "T-shirt",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070200/tshirt_aiiaqy.jpg",
+    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659955987/Tshirt_juv0z0.jpg",
     type:"Lorem Ipsum is simply dummy text",
     somedata:"1100 + order placed from here recently",
     price: "10",
@@ -56,7 +56,7 @@ export const Itemdata = [
   {
     id: 7,
     rname: "Shirt",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070200/shirt_amvwq9.jpg",
+    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659956474/Shirt_hn2vyx.jpg",
     type:"Lorem Ipsum is simply dummy text",
     somedata:"1100 + order placed from here recently",
     price: "12",
@@ -65,7 +65,7 @@ export const Itemdata = [
   {
     id: 8,
     rname: "Jeans",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070200/jeans_ls9rvk.jpg",
+    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659956474/Jeans_qayhdw.jpg",
     type:"Lorem Ipsum is simply dummy text",
     somedata:"1100 + order placed from here recently",
     price: "50",
@@ -76,23 +76,23 @@ export const Itemdata = [
 
 export const productData = [
   {
-    id: 1,
+    id: 9,
     rname: "Men's Jacket",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_1_ljvf7o.png",
+    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659957164/MensJacket_z7ijov.png",
     price: "50",
     category:"men's",
     qnty: 0,
   },
   {
-    id: 2,
+    id: 10,
     rname: "Shopping bag",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_2_nsn40t.png",
+    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659957164/Shopingbag_bbostv.png",
     price: "25",
     category:"women's",
     qnty: 0,
   },
   {
-    id: 3,
+    id: 11,
     rname: "Swetshirt",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_3_lgiygk.png",
     price: "45",
@@ -100,7 +100,7 @@ export const productData = [
     qnty: 0,
   },
   {
-    id: 4,
+    id: 12,
     rname: "Traveling Bag",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_4_wa3mfh.png",
     price: "30",
@@ -108,7 +108,7 @@ export const productData = [
     qnty: 0,
   },
   {
-    id: 5,
+    id: 13,
     rname: "Sneaker",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_5_mdihpj.png",
     category:"women's",
@@ -116,23 +116,16 @@ export const productData = [
     qnty: 0,
   },
   {
-    id: 6,
+    id: 14,
     rname: "Sunglasses",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_6_ahosoh.png",
     price: "10",
     category:"accessories",
     qnty: 0,
   },
+ 
   {
-    id: 7,
-    rname: "Swetshirt",
-    imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_7_zqncwq.png",
-    price: "40",
-    category:"women's",
-    qnty: 0,
-  },
-  {
-    id: 8,
+    id: 16,
     rname: "Purse",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_8_v0ejy9.png",
     price: "50",
@@ -140,7 +133,7 @@ export const productData = [
     qnty: 0,
   },
   {
-    id: 9,
+    id: 17,
     rname: "Shirt",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_9_dkmv8v.png",
     price: "42",
@@ -148,7 +141,7 @@ export const productData = [
     qnty: 0,
   },
   {
-    id: 10,
+    id: 18,
     rname: "Swetshirt",
     imgdata: "https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070284/product_10_xhejbb.png",
     price: "40",

@@ -33,14 +33,14 @@
 
 } */
 
-.grid_sorting_button:hover{
-    background: gray;
+.grid_sorting_button:active{
+    background:black;
 
 }
-.grid_sorting_button{
+/* .grid_sorting_button{
     color:#FFFFFF;
     background: black;
-}
+} */
 
 .product-grid
 {
@@ -49,7 +49,12 @@
 }
 .product-item
 {
-	width: 20%;
+	width: 100%;
 	height: 380px;
 	cursor: pointer;
+}
+
+.section{
+     /* background-image: url("https://res.cloudinary.com/dsmlde0pv/image/upload/v1660127352/back_img2_yblfbd.jpg"); */
+     background-color:bisque;
 }

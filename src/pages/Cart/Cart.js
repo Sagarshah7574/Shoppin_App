@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react"
 import "../../assets/global.css"
 import "./Cart.css"
 import "../Viewpage/Viewpage.css"
-import { Button, Card, Table } from "react-bootstrap"
+import { Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { ADD, DLT, REMOVE } from "../../redux/action/index"
-import { Link, useParams } from "react-router-dom"
+import {  Link, useParams } from "react-router-dom"
 import { isDisabled } from "@testing-library/user-event/dist/utils"
 
 function Cart() {
@@ -32,86 +32,153 @@ function Cart() {
   }, [id])
 
   const dlt = (id) => {
-    dispatch(DLT(id))
+    if(window.confirm("Are you sure wanted to remove this  item?"))
+    {
+      dispatch(DLT(id))
+    }
+    
   }
 
-  
   const send = (e) => {
     // console.log(e);
     dispatch(ADD(e))
   }
 
   const remove = (item) => {
-   
     dispatch(REMOVE(item))
   }
+
+   
+   
 
   return (
     <div>
       {getdata.length ? (
-        <div className="container">
+        <div className="container fluid">
           <div className="row ">
-            {getdata.map((element, id) => {
-              return (
-                <>
-                  <div className="details cart " key={id}>
-                    <Link to={`/view/${element.id}`}>
+            {/* <div className="details cart " key={id}>
+                   
                       {" "}
-                      <img src={element.imgdata} alt="" />{" "}
-                    </Link>
+                     <img src={element.imgdata} style={{width:"100px",height:"100px"}}alt="" />{" "}
+                  
                     
                     <div className="box">
                       <div className="row">
-                        <h2>{element.rname}</h2>
+                        <h6>{element.rname}</h6>
                         <span>${element.price}</span>
                       </div>
-                      <p>{element.type}</p>
-                      <p>{element.somedata}</p>
-                      <div className="amount">
-                        <Button
-                          className="btn btn-light ms-2"
+                     
+                     <div className="amount">
+                       <Button 
+                           className="btn btn-light ms-2"
                           onClick={
                             element.qnty <= 1
                               ? isDisabled
-                              : () => remove(element)
-                          }
-                        >
-                          -
-                        </Button>
+                               : () => remove(element)
+                           }
+                         >
+                           -
+                         </Button>
                         <span>{element.qnty}</span>
                         <Button
                           className="btn btn-light ms-2"
-                          onClick={() => send(element)}
+                           onClick={() => send(element)}
                         >
                           +
                         </Button>
-                        <p>
+                       <p>
                           <strong>Total</strong>:${element.price * element.qnty}
                         </p>
-                      </div>
+                     </div>
                     </div>
-                    <div className="delete">
-                      <Button
-                        className="button"
-                        variant="secondary"
+          <div className="delete">
+                       <Button
+                       className="button"
+                      variant="secondary"
                         size="lg"
-                        onClick={() => dlt(element.id)}
-                        style={{ cursor: "pointer", margin: "25px" }}
+                       onClick={() => dlt(element.id)}
+                       style={{ cursor: "pointer", margin: "25px" }}
                       >
-                        Remove
-                      </Button>
+                         Remove
+                       </Button>
                     </div>
-                  </div>
-                </>
-              )
-            })}
+                          </div> */}
+
+            <div className="row">
+              <div className="col-md-12 ">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>SubTotal</th>
+                      <th>Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {getdata.map((element, id) => {
+                      return (
+                        <tr key={id}>
+                         
+                          <td>
+                            <img
+                              src={element.imgdata}
+                              style={{ width: "100px", height: "100px",background:"#efe7e4" }}
+                              alt=""
+                            />
+                          </td>
+                          <td>{element.rname}</td>
+                          <td>${element.price}</td>
+                          <td>
+                            <Button
+                              className="btn btn-light ms-2"
+                              onClick={
+                                element.qnty <= 1
+                                  ? isDisabled
+                                  : () => remove(element)
+                              }
+                            >
+                              -
+                            </Button>
+                            <span>{element.qnty}</span>
+                            <Button
+                              className="btn btn-light ms-2"
+                              onClick={() => send(element)}
+                            >
+                              +
+                            </Button>
+                          </td>
+                          <td>
+                            <p>
+                              $
+                              {element.price * element.qnty}
+                            </p>
+                          </td>
+                          <td>
+                            <span
+                              className="btn btn-dark"
+                              onClick={() => dlt(element.id)}
+                              style={{marginBottom:"12px"}}
+                            >
+                              Remove
+                            </span>
+                          </td>
+                        </tr>
+                      )
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
-        "this is empty"
+        <img src="assets/buy-now-or-cry-later-crying.gif" alt="" className='emptycart_img' style={{width:"300px",padding:10}}  />
       )}
       <div className="total" style={{ marginRight: "50px" }}>
-        {/* <Link to="/payment">Payment</Link> */}
+        <Link to="/payment">Payment</Link>
         <h3>
           {" "}
           Total Price:$

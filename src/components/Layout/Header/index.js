@@ -10,6 +10,8 @@ import { Badge } from "@mui/material"
 import { useState } from "react"
 import { useSelector } from "react-redux"
 
+import { Button } from "react-bootstrap"
+
 
 
 function Header() {
@@ -24,24 +26,26 @@ function Header() {
   // const handleClose = () => {
   //   setAnchorEl(null)
   // }
+  // const activeLink="bg-red-100 text-black"
+  // const normalLink=""
 
   return (
     <Navbar bg="light" expand="lg" sticky="top">
       <Container fluid>
-        <Link to={home}>
+        <Link to={home} style={{textDecoration:"none"}}>
           {" "}
           <img
             src="https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070200/cart_ambnx1.jpg"
             width="30"
             height="30"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top mt-2"
             alt="React Bootstrap logo"
           />
-        </Link>
+       
 
         <Navbar.Brand style={{ margin: "5px" }}>
           {" "}
-          <span style={{ fontSize: "30px" }} className="list-style-type-none">
+          <span style={{ fontSize: "30px" }} className="text-decoration-none">
             {" "}
             Elite
           </span>{" "}
@@ -49,6 +53,7 @@ function Header() {
             Shoppy
           </span>
         </Navbar.Brand>
+        </Link>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -57,11 +62,11 @@ function Header() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link to={home} className="text-decoration-none text-dark mx-3">
-              Home
+            <Link to={home} className="text-decoration-none text-dark mx-3 ">
+            <Button variant="outline-dark">Home</Button>
             </Link>
             <Link to={shop} className="text-decoration-none text-dark mx-3">
-              Shop
+            <Button variant="outline-dark">Shop</Button>
             </Link>
           </Nav>
           <Form className="d-flex mx-5">
@@ -80,7 +85,7 @@ function Header() {
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
             >
-              <Link to={cart}>    
+              <Link to={cart} style={{textDecoration:"none"}}>    
              <ShoppingBagRoundedIcon
                 style={{ height: "40px", width: "40px" }}
               />

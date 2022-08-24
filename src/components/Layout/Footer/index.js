@@ -8,17 +8,18 @@ const Footer = () => {
   return (
     <>  
     <section>                            
-    <div className="footer mt-3">
+    <div className="footer mt-1">
       <div className="container">
         <div className="row">
           <div className="col-md-12">
+            
              <div className="logo">
               <img src="https://res.cloudinary.com/dsmlde0pv/image/upload/v1659070200/cart_ambnx1.jpg"
                width="30"
               height="30"
-              className="d-inline-block align-top"
+              className="d-inline-block align-top mt-1"
               alt="React Bootstrap logo"/>
-              <span  style={{fontSize:"30px"}}>Elite</span> <span  style={{fontSize:"30px"}}>Shoppy</span>
+              <span  style={{fontSize:"30px",margin: "5px"}} >Elite</span> <span  style={{fontSize:"30px"}}>Shoppy</span>
             </div>
           </div>
            <div className="col-md-12">

@@ -10,7 +10,7 @@ function Banner() {
       <Carousel.Item>
         <img
           className="slider"
-          src="assets/sliderimgs/banner-bg.jpg"
+          src="https://res.cloudinary.com/dsmlde0pv/image/upload/v1659706332/banner-bg_ssio5b.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -22,7 +22,7 @@ function Banner() {
       <Carousel.Item>
         <img
           className="slider"
-          src="assets/sliderimgs/aprel.jpg"
+          src="https://res.cloudinary.com/dsmlde0pv/image/upload/v1659706009/banner3_xpbzjw.jpg"
           alt="Second slide"
         />
 
@@ -35,7 +35,7 @@ function Banner() {
       <Carousel.Item>
         <img
           className="slider"
-          src="assets/sliderimgs/sale1.jpg"
+          src="https://res.cloudinary.com/dsmlde0pv/image/upload/v1659706009/banner5_kcugxx.jpg"
           alt="Third slide"
         />
 

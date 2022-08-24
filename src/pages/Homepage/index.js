@@ -1,37 +1,33 @@
 import React, { useState } from "react"
 import { Card } from "react-bootstrap"
-import { useDispatch, useSelector } from "react-redux"
+
 import { Link } from "react-router-dom"
 import Banner from "../../components/commonBanner"
 import { Itemdata } from "../Itemdata"
 
+
+
 function Home() {
   const [data] = useState(Itemdata)
 
-  const getdata = useSelector((state) => state.cartreducer.carts)
-  // console.log(getdata)
+  
 
-  const [anchorEl, setAnchorEl] = useState(null)
-  // const open = Boolean(anchorEl);
-  // const handleClick = (e) => {
-  //   setAnchorEl(e.currentTarget)
-  // }
-  // const handleClose = () => {
-  //   setAnchorEl(null)
-  // }
+  // const [anchorEl, setAnchorEl] = useState(null)
+  
 
-  const dispatch = useDispatch()
-
+  // const dispatch = useDispatch()
+  
   return (
     <div>
       <Banner />
-
-      <div className="container mt-3">
-        <h2 className="text-center">Featured Products</h2>
+       <div className="section">         
+      <div className="container ">
+        <h2 className="text-center mt-0.5">Featured Products</h2>
         <div className="row d-flex justify-content-center align-items-center">
           {data.map((element,id) => {
             return (
               <>
+                
                 <Card
                   style={{ width: "285px", border: "none" }}
                   className="mx-2 mt-4 card_style"  
@@ -59,6 +55,7 @@ function Home() {
           })}
         </div>
       </div>
+    </div>
     </div>
   )
 }
